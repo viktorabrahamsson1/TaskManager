@@ -3,13 +3,21 @@ package com.viktorstaskmanager.Taskmanager;
 import java.util.HashMap;
 
 public class User {
-  private String name;
-  private String password;
-  private HashMap<String,String> tasks;
+  private final String name;
+  private final String password;
+  private final HashMap<String, String> tasks = new HashMap<>();
 
-  public User(String name, String password){
+  public User(String name, String password) {
     this.name = name;
     this.password = password;
-    this.tasks = new HashMap<>();
   }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public String getPassword() {
+    return this.password;
+  }
+
 }
