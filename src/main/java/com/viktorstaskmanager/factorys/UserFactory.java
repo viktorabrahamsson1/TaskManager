@@ -23,13 +23,7 @@ public class UserFactory {
   }
 
   public static boolean removeUserFromList(String name, String password, User loggedInUser, ArrayList<User> users) {
-    for (User user : users) {
-      if (name.equals(user.getName()) && password.equals(user.getPassword()) && user.equals(loggedInUser)) {
-        users.remove(user);
-        return true;
-      }
-    }
-    return false;
+    return users.removeIf(user -> user.getName().equals(name) && user.getPassword().equals(password));
   }
 
   public static User logIn(String name, String password, ArrayList<User> users) {

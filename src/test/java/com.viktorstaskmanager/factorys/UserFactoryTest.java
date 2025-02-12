@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 public class UserFactoryTest {
 
   private ArrayList<User> users;
@@ -44,6 +45,17 @@ public class UserFactoryTest {
     // Assert
     assertFalse(result);  // Should return false if name is empty
     assertEquals(0, users.size());  // User should not be added
+  }
+
+  @Test
+  public void testAddUserToList_Failure_EmptyPassword() {
+    String name = "Test Name";
+    String password = "";
+
+    boolean result = UserFactory.addUserToList(name, password, users);
+
+    assertFalse(result);
+    assertEquals(0, users.size());
   }
 
   @Test
