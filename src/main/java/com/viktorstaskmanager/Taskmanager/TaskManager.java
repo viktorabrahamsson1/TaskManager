@@ -15,6 +15,11 @@ public class TaskManager {
     scanner = new Scanner(System.in);
   }
 
+  /*
+   ***********************
+   * USER RELATED LOGIC
+   ***********************
+   */
 
   public void logIn() {
     System.out.print("Enter your name: ");
@@ -85,5 +90,32 @@ public class TaskManager {
     }
   }
 
+
+  /*
+   ***********************
+   * TASK RELATED LOGIC
+   ***********************
+   */
+
+
+  public void addTask() {
+    System.out.print("Enter your task:");
+    String taskContent = scanner.nextLine();
+    System.out.println("Enter the due date for the task (days): ");
+    int dueDateDays = scanner.nextInt();
+    
+  }
+
+  public void deleteTask() {
+
+  }
+
+  public void modifyTask() {
+
+  }
+
+  public void completeTask() {
+
+  }
 
 }
